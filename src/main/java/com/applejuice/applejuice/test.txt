@@ -1,0 +1,9 @@
+@Override
+    public void onInitialize() {
+        APPLE_JUICE = Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "acid"), new FluidBlock(STILL_APPLE_JUICE, FabricBlockSettings.copy(Blocks.WATER)) {
+        });
+        STILL_APPLE_JUICE = Registry.register(Registries.FLUID, new Identifier("applejuice", "apple_juice"), new AppleJuiceFluid.Still());
+        FLOWING_APPLE_JUICE = Registry.register(Registries.FLUID, new Identifier("applejuice", "flowing_apple_juice"), new AppleJuiceFluid.Flowing());
+        APPLE_JUICE_BUCKET = Registry.register(Registries.ITEM, new Identifier("applejuice", "apple_juice_bucket"),
+                new BucketItem(STILL_APPLE_JUICE, new Item.Settings().recipeRemainder(Items.BUCKET).maxCount(1)));
+    }

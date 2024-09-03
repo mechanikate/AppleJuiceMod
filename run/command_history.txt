@@ -1,0 +1,6 @@
+/give @s applejuice:apple_juice_bucket
+/give @s applejuice:apple_juice_bottle
+/give @s applejuice:apple_juice_bucket
+/gamemode survival
+/effect give @s hunger 255 255
+/effect clear

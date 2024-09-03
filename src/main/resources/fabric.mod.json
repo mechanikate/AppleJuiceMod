@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "applejuice",
+  "version": "${version}",
+  "name": "Apple Juice",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/applejuice/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "com.applejuice.applejuice.client.AppleJuiceClient"
+    ],
+    "main": [
+      "com.applejuice.applejuice.AppleJuice"
+    ]
+  },
+  "mixins": [
+    "applejuice.mixins.json",
+    {
+      "config": "applejuice.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
